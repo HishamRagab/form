@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+body {
+  background-color: #c1bdba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  width: 600px;
+  background-color: #13232fe6;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+form .toggles {
+  display: flex;
+  margin-bottom: 40px;
+}
+form .toggles a {
+  padding: 10px;
+  background: #a0b3b040;
+  color: #a0b3b0;
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+form .toggles a.active {
+  background: #1ab188;
+  color: white;
+}
+form .toggles a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+form .sign-up,
+form .log-in {
+  display: none;
+}
+form .sign-up.active {
+  display: block;
+}
+form .log-in.active {
+  display: block;
+}
+form h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+}
+form input {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0px 10px;
+  border: 1px solid #a0b3b0;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+form .sign-up input[type="text"] {
+  width: 47%;
+}
+form .sign-up input[name="first-name"] {
+  margin-right: 5%;
+}
+form input:focus {
+  border-color: #179b77;
+}
+form input::placeholder {
+  color: #ffffff80;
+  font-size: 22px;
+}
+
+form .sign-up > button,
+form .log-in > button {
+  width: 100%;
+  background-color: #1ab188;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 15px;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  border: none;
+  transition: 0.5s ease;
+}
+form .sign-up > button:hover,
+form .log-in > button:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+
+.log-in .forgot {
+  display: block;
+  color: #1ab188;
+  text-align: right;
+  text-decoration: none;
+  margin: -20px 0 10px;
+}
+@media (max-width: 650px) {
+  form {
+    width: 400px;
+  }
+  form .sign-up input[type="text"] {
+    width: 46%;
+  }
+  form .sign-up input[name="first-name"] {
+    margin-right: 6%;
+  }
+  form .sign-up > button,
+  form .log-in > button {
+    font-size: 25px;
+  }
+}
+@media (max-width: 450px) {
+  form {
+    width: 350px;
+  }
+  form .toggles {
+    margin-bottom: 25px;
+  }
+  form .toggles a {
+    padding: 8px;
+    font-size: 18px;
+  }
+  form h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  form input {
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  form input::placeholder {
+    font-size: 18px;
+  }
+  .log-in .forgot {
+    font-size: 13px;
+  }
+  form .sign-up > button,
+  form .log-in > button {
+    font-size: 20px;
+  }
+}
